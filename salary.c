@@ -1,27 +1,17 @@
 #include<stdio.h>
 int main()
 {
-	int ba,gt,hra,da;
-	printf("Basic Salary:");
-	scanf("%d",&ba);
-	gt=ba+hra+da;
-	if(ba<=10000)
+	int w,e,h=100;
+	printf("Enter week hours: ");
+	scanf("%d",&w);
+	if(w<=40)
 	{
-	hra=(ba*20)/100;
-	da=(ba*80)/100;
-	printf("%d",gt);
+	e=h*w;
+	printf("%d",e);
 	}
-	else if(ba<=20000)
+	else
 	{
-	hra=(ba*25)/100;
-	da=(ba*90)/100;
-	printf("%d",gt);
+	e=40*h+(w-40)*h*1.5;
+	printf("%d",e);
 	}
-	else if(ba>20000)
-	{
-	hra=(ba*30)/100;
-	da=(ba*95)/100;
-	printf("%d",gt);
-	}
-	return 0;
 }
